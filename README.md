@@ -27,7 +27,7 @@ This project investigates the transcriptomic effects of physiological sound wave
 1) Intra Signal Analysis (for each treatment separately)
 - Post vs Pre Treatment without LPS (5 comparisons: for 1 control and 4 treatments)
 - Post vs Pre Treatment with LPS (5 comparisons: for 1 control and 4 treatments)
-- Pre Treatment with LPS vs Pre Treatment without LPS (5 comparisons: for 1 control and 4 treatments
+- Pre Treatment with LPS vs Pre Treatment without LPS (5 comparisons: for 1 control and 4 treatments)
 - Post Treatment with LPS vs Post Treatment  without LPS (5 comparisons: for 1 control and 4 treatments)
 
 2) Inter Signal Analysis (each treatment compared to the control) 
