@@ -1,15 +1,15 @@
 # ------------------------------------------------------------------------------
- #title: "Multiplexed scRNA-seq Analysis: Effect of physiological Sound Waves on Immune Cells"
+ #title: "Multiplexed scRNA-seq Analysis: Effect of physiological Sound Waves on Immune Cells Transcriptomic Profile"
  #Author: Nasim Rahmatpour
  #Date: "2024-11-14"
 # ------------------------------------------------------------------------------
 
 # Project Overview
 
-#There are **30 libraries total**, Each library contains **8 samples**,  representing **240 samples** from **12 human subjects** across 5 randomized study visits.
-#The **4 samples from each study visit** are always grouped and processed together. 
 
-#This project investigates the transcriptomic effects of physiological sound wave stimulation on human immune cells, both with and without lipopolysaccharide (LPS) in different treatments to explore how immune cell states respond to both physical and chemical stimulation.
+#There are **30 libraries total**, Each library contains **8 samples**,  representing **240 samples** from **12 human subjects** across 5 randomized study visits.
+#Each sample before treatment and after treatment was exposed to the the physiological sound (LPS)
+#This project investigates the transcriptomic effects of physiological sound wave stimulation on human immune cells, in different treatments to explore how immune cell states respond to both physical and chemical stimulation.
 
 ----
   
