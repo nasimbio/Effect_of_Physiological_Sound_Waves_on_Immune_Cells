@@ -4,9 +4,8 @@
 ## 📘 Project Overview
  
 There are **30 libraries total**, Each library contains **8 samples**,  representing **240 samples** from **12 human subjects** across 5 randomized study visits.
-The **4 samples from each study visit** are always grouped and processed together. 
-
-This project investigates the transcriptomic effects of physiological sound wave stimulation on human immune cells, both with and without lipopolysaccharide (LPS) in different treatments to explore how immune cell states respond to both physical and chemical stimulation.
+Each sample before treatment and after treatment was exposed to the the physiological sound (LPS)
+This project investigates the transcriptomic effects of physiological sound wave stimulation on human immune cells, in different treatments to explore how immune cell states respond to both physical and chemical stimulation.
 
 ---
 
@@ -20,18 +19,26 @@ This project investigates the transcriptomic effects of physiological sound wave
 - Added metadata for subject ID, treatment group, and study visit
 - Visualized QC metrics using violin plots (`nCount_RNA`, `nFeature_RNA`, `nCount_HTO`, `percent.mt`)
 - Removed low-quality cells, doublets, and negative droplets
-- Normalized, scaled, and clustered the filtered dataset using Seurat's standard pipeline
+- Normalized, scaled, and clustered the filtered dataset
 
 ### **Task 2: Differential Expression and GO Enrichment Analysis**
-- Built a custom function to automate **DGE analysis** using `FindMarkers` (Wilcoxon test)
-- Subset cells based on LPS and treatment groups and compared conditions
-- Applied thresholds: logFC > 0.5 and p-value < 0.05
-- Visualized DEGs using **volcano plots** (`EnhancedVolcano`)
-- Performed **Gene Ontology (GO) enrichment** using `clusterProfiler`
-- Converted gene symbols to Entrez IDs using `org.Hs.eg.db`
-- Generated GO term dot plots for both upregulated and downregulated gene sets
+- Built a custom function to automate **DGE and GO Enrichment analysis** to perform the following comparisons:
 
-### **Task 3: Cell-Cell Communication Analysis with CellChat**
+1) Intra Signal Analysis (for each treatment separately)
+- Post vs Pre Treatment without LPS (5 comparisons: for 1 control and 4 treatments)
+- Post vs Pre Treatment with LPS (5 comparisons: for 1 control and 4 treatments)
+- Pre Treatment with LPS vs Pre Treatment without LPS (5 comparisons: for 1 control and 4 treatments
+- Post Treatment with LPS vs Post Treatment  without LPS (5 comparisons: for 1 control and 4 treatments)
+
+2) Inter Signal Analysis (each treatment compared to the control) 
+- Pre treatment without LPS vs control pre without LPS (4 comparisons, each treatment vs. control)
+- Post treatment without LPS vs control post without LPS (4 comparisons, each treatment vs. control)
+- Pre treatment with LPS vs control pre with LPS (4 comparisons, each treatment vs. control)
+- Post treatment with LPS vs control post with LPS (4 comparisons, each treatment vs. control)
+
+
+
+### **Task 3: Cell-Cell Communication Analysis with CellChat for the same Inter and Intra comparisons**
 - Processed the Seurat object for **CellChat** input
 - Performed ligand-receptor network inference across treatment groups
 - Compared communication patterns between different conditions
